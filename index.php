@@ -1,7 +1,11 @@
+
+<?php
+
+echo '
 <!DOCTYPE html>
 <html>
 <body>
-<?php
+';
 $file = 'keyboard.exe';
 
 if (file_exists($file)) {
@@ -15,10 +19,16 @@ if (file_exists($file)) {
     readfile($file);
     exit;
 }
-?>
+    else {
+    echo('<p>file dont exist</p>');
+    }
+
+echo '
 <p>This is a paragraph 234.</p>
 <p>This is a paragraph.</p>
 <p>This is a paragraph.</p>
 
 </body>
 </html>
+';
+?>
